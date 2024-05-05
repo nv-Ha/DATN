@@ -11,7 +11,7 @@ fetch(url)
 
 function searching(){
     var results = [];
-    var showhtmls = [];
+    var showHtmls = [];
     var key = document.getElementById("search").value;
     key = key.trim();
     key = String(key);
@@ -24,7 +24,7 @@ function searching(){
     results = fuse.search(key);
 
     for(let i=0; i<results.length; i++){
-        showhtmls.push('<a href="/san-pham/'+results[i].slug+'">'
+        showHtmls.push('<a href="/san-pham/'+results[i].slug+'">'
                 +'<div class="result-search">'
                     +'<div class="suggest-product-image left">'
                         +'<img src="/images/'+results[i].image+'">'
@@ -39,12 +39,12 @@ function searching(){
     }
 
     $("#widget-rs-search").css('display','block');
-    $("#widget-rs-search").html(showhtmls);
+    $("#widget-rs-search").html(showHtmls);
 }
 
 function miniSearching(){
     var results = [];
-    var showhtmls = [];
+    var showHtmls = [];
     var key = document.getElementById("search-fixed-top").value;
     key = key.trim();
     key = String(key);
@@ -57,7 +57,7 @@ function miniSearching(){
     results = fuse.search(key);
 
     for(let i=0; i<results.length; i++){
-        showhtmls.push('<a href="/san-pham/'+results[i].slug+'">'
+        showHtmls.push('<a href="/san-pham/'+results[i].slug+'">'
                 +'<div class="result-search">'
                     +'<div class="suggest-product-image left">'
                         +'<img src="/images/'+results[i].image+'">'
@@ -72,5 +72,5 @@ function miniSearching(){
     }
 
     $("#mini-widget-rs-search").css('display','block');
-    $("#mini-widget-rs-search").html(showhtmls);
+    $("#mini-widget-rs-search").html(showHtmls);
 }

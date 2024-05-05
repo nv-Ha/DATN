@@ -3901,25 +3901,25 @@ table.text-center th {
   background-color: #ffffff;
 }
 .btn-reddit {
-  color: #000000;
+  color: #FF6600;
   background-color: #eff7ff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-reddit:focus,
 .btn-reddit.focus {
-  color: #000000;
+  color: #FF6600;
   background-color: #bcddff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-reddit:hover {
-  color: #000000;
+  color: #FF6600;
   background-color: #bcddff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .btn-reddit:active,
 .btn-reddit.active,
 .open > .dropdown-toggle.btn-reddit {
-  color: #000000;
+  color: #FF6600;
   background-color: #bcddff;
   border-color: rgba(0, 0, 0, 0.2);
 }
@@ -3930,7 +3930,7 @@ table.text-center th {
 }
 .btn-reddit .badge {
   color: #eff7ff;
-  background-color: #000000;
+  background-color: #FF6600;
 }
 .btn-soundcloud {
   color: #ffffff;
@@ -4515,7 +4515,7 @@ table.text-center th {
   background-color: #b5bbc8 !important;
 }
 .bg-black-active {
-  background-color: #000000 !important;
+  background-color: #FF6600 !important;
 }
 .bg-red-active,
 .modal-danger .modal-header,

@@ -57,12 +57,12 @@
                 <g id="Rectangle-3" opacity="0.529792444">
                     <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-6"></use>
                     <use fill="none" xlink:href="#path-6"></use>
-                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <use fill="#FF6600" fill-rule="evenodd" xlink:href="#path-6"></use>
                 </g>
                 <g id="Rectangle-4" opacity="0.171583489">
                     <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-7"></use>
                     <use fill="none" xlink:href="#path-7"></use>
-                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <use fill="#FF6600" fill-rule="evenodd" xlink:href="#path-7"></use>
                 </g>
             </g>
         </g>

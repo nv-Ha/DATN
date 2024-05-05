@@ -1,7 +1,7 @@
 @extends('layouts.master_admin') 
 
 @section('controll')
-New Unit
+New Category
 @endsection
 
 @section('content')
@@ -34,7 +34,7 @@ New Unit
 
 					<button type="button" class="btn btn-success btn-save" >Lưu thông tin</button>
 
-					<a href="/admin/unit" class="btn btn-danger">Hủy bỏ</a>
+					<a href="/admin/category" class="btn btn-danger">Hủy bỏ</a>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@ New Unit
 
 		$.ajax({
 			type : 'post',
-			url : '/admin/unit',
+			url : '/admin/category',
 			data : form_data,
 			dataType : 'json',
 			contentType: false,

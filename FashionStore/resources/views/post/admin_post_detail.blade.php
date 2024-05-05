@@ -40,19 +40,25 @@ Post Detail
 
 <div class="form-group">
 	<label for="">Chủ đề</label>
-	<div class="qtagselect isw360">
-		<select id="getCategoryId" class="form-control select2">
-			<option class="isblue" value="{{ $post->post_category_id }}">{{ $post->name }}</option>
-		</select>
-		<script>
-			$('#select-state').selectize({
-				maxItems: 3,
-				closeAfterSelect:true,
-				highlight:true,
-				selectOnTab:true,
-			});
-		</script>
-	</div>
+	<select name="post_categories[]" id="getCategoryId" class="form-control" style="width: 100%; margin-top: 0px;">
+			@if(isset($post_categories))
+				@foreach($post_categories as $value)
+					@if($post->post_category_id == $value->id)
+						<option selected class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
+					@else
+						<option class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
+					@endif
+				@endforeach
+			@endif
+	</select><br>
+	<script>
+		$('#getCategoryId').selectize({
+			maxItems: 1,
+			closeAfterSelect:true,
+			highlight:true,
+			selectOnTab:true,
+		});
+	</script>
 </div>
 
 <div class="form-group">

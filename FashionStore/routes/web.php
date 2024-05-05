@@ -30,10 +30,7 @@ use App\Http\Controllers\Customer\LoginController as CustomerLoginController;
 use App\Http\Controllers\Customer\LogoutController as CustomerLogoutController;
 use App\Http\Controllers\Customer\RegisterController as CustomerRegisterController;
 use App\Http\Controllers\Customer\SearchController as CustomerSearchController;
-use App\Http\Controllers\Customer\VitaminProductController as CustomerVitaminProductController;
-use App\Http\Controllers\Customer\EnergyProductController as CustomerEnergyProductController;
-use App\Http\Controllers\Customer\FiberProductController as CustomerFiberProductController;
-use App\Http\Controllers\Customer\SpecialProductController as CustomerSpecialProductController;
+use App\Http\Controllers\Customer\CustomerProductController;
 use App\Http\Controllers\Customer\HomeController as CustomerHomeController;
 use App\Http\Controllers\Customer\CartController as CustomerCartController;
 use App\Http\Controllers\Customer\CheckoutController as CustomerCheckoutController;
@@ -73,10 +70,7 @@ Route::post('/create/account', [CustomerRegisterController::class, 'createAccoun
 Route::get('/search', [CustomerSearchController::class, 'search']);
 
 // danh mục sản phẩm
-Route::get('/cua-hang/bo-sung-vitamin-khoang-chat', [CustomerVitaminProductController::class, 'vitaminProduct']);
-Route::get('/cua-hang/nuoc-tang-luc-giai-khat', [CustomerEnergyProductController::class, 'energyProduct']);
-Route::get('/cua-hang/giau-chat-xo-tieu-hoa', [CustomerFiberProductController::class, 'fiberProduct']);
-Route::get('/cua-hang/chuc-nang-dac-biet', [CustomerSpecialProductController::class, 'specialProduct']);
+Route::get('/cua-hang/{slug}', [CustomerProductController::class, 'fetchProduct']);
 
 // chi tiet san pham 
 Route::get('/san-pham/{slug}', [CustomerHomeController::class, 'productDetail']);
@@ -210,7 +204,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'CheckAdmin'], function () {
 	Route::get('/new/tag', function () {
 		return view('tag.new_tag');
 	});
-
+	
 	// manufacturers 
 	Route::get('/manufacturer', [ManufactureController::class, 'index']);
 	Route::get('/manufacturer/{id}', [ManufactureController::class, 'show']);

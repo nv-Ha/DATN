@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Product;
+use App\Models\ProductSize;
 use App\Models\Variant;
 use Validator;
 
@@ -12,10 +13,9 @@ class ProductController extends Controller
 {
     function indexProducts(){
         return Product::select("products.*", "product_categories.name as product_category_name",
-            "colors.name as color_name", "sizes.name as size_name")
+            "colors.name as color_name")
             ->join("product_categories", "product_categories.id", "=", "products.product_category_id")
             ->join("colors", "colors.id", "=", "products.color_id")
-            ->join("sizes", "sizes.id", "=", "products.size_id")
             ->orderBy('products.id', 'desc')
             ->get();
     }
@@ -44,7 +44,7 @@ class ProductController extends Controller
                 'product_category_id' => 'required',
                 'manufacturer_id' => 'required',
                 'color_id' => 'required',
-                'size_id' => 'required',
+                'sizes' => 'required',
                 'price_prime' => 'required|numeric|min:0',
                 'price' => 'required|numeric|min:0',
                 'price_sale' => 'required|numeric|min:0',
@@ -57,7 +57,7 @@ class ProductController extends Controller
                 'product_category_id.required' => 'Danh mục sản phẩm không được để trống',
                 'manufacturer_id.required' => 'Thương hiệu không được để trống',
                 'color_id.required' => 'Màu không được để trống',
-                'size_id.required' => 'Kích thước không được để trống',
+                'sizes.required' => 'Kích thước không được để trống',
                 'price_prime.required' => 'Giá nhập sản phẩm không được để trống',
                 'price_prime.numeric' => 'Giá nhập của sản phẩm phải là số',
                 'price_prime.min' => 'Giá nhập của sản phẩm phải lớn hơn hoặc bằng 0',
@@ -115,6 +115,10 @@ class ProductController extends Controller
         $data['bought'] = 0;
         $data['view_count'] = 0;
         $variant_product_ids = explode(',', $data['variant_product_ids']);
+
+        $sizes_id = explode(',', $data['sizes']);
+        unset($data['sizes']);
+
         unset($data['_token']);
         unset($data['variant_product_ids']);
         $product = Product::create($data);
@@ -122,11 +126,26 @@ class ProductController extends Controller
         if (isset($product)) {
             // variants handling...
             foreach ($variant_product_ids as $variant_product_id) {
-                Variant::create([
-                    'product_id' => $product->id,
-                    'variant_product_id' => $variant_product_id,
-                ]);
-            }
+                if($variant_product_id != ""){
+                    Variant::create([
+                        'product_id' => $product->id,
+                        'variant_product_id' => $variant_product_id,
+                    ]);
+                    $product = Product::where('id', $variant_product_id)->update([
+                        'is_main' => 0
+                    ]);
+                }
+            };
+
+            // size handling...
+            foreach ($sizes_id as $size_id) {
+                if($size_id != ""){
+                    ProductSize::create([
+                        'product_id' => $product->id,
+                        'size_id' => $size_id,
+                    ]);
+                }
+            };
             return response()->json(['is' => 'success', 'complete' => 'Sản phẩm của bạn được thêm thành công']);
         }
         return response()->json(['is' => 'unsuccess', 'uncomplete' => 'Sản phẩm của bạn chưa được thêm']);
@@ -138,9 +157,7 @@ class ProductController extends Controller
         $products = Product::select("products.*", "product_categories.name as product_category_name")
         ->join("product_categories", "product_categories.id", "=", "products.product_category_id")
         ->join("colors", "colors.id", "=", "products.color_id")
-        ->join("sizes", "sizes.id", "=", "products.size_id")
         ->where("products.id", "!=", $id)
-        ->orderBy('products.id', 'desc')
         ->get();
         $variant_products = Variant::where("product_id", "=", $id)->get();
         $variants = [];
@@ -190,7 +207,6 @@ class ProductController extends Controller
             'product_category_id' => $data['product_category_id'],
             'manufacturer_id' => $data['manufacturer_id'],
             'color_id' => $data['color_id'],
-            'size_id' => $data['size_id'],
             'description' => $data['description'],
             'maintain' => $data['maintain'],
             'price_prime' => $data['price_prime'],
@@ -213,14 +229,47 @@ class ProductController extends Controller
         if ($product) {
             $variant_product_ids = explode(',', $data['variant_product_ids']);
             if(count($variant_product_ids) !== 0){
+                $variant_products_temp = Variant::where("product_id", "=", $data['id'])->get();
+                foreach ($variant_products_temp as $item) {
+                    $find_record = Variant::where("variant_product_id", "=", $item['variant_product_id'])->where("product_id", "!=", $item['product_id'])->first();
+                    if(isset($find_record)){
+                        Product::where('id', $item['variant_product_id'])->update([
+                            'is_main' => 0
+                        ]);
+                    }
+                    else{
+                        Product::where('id', $item['variant_product_id'])->update([
+                            'is_main' => 1
+                        ]);
+                    }
+                }
                 Variant::where("product_id", "=", $data['id'])->delete();
                 foreach ($variant_product_ids as $variant_product_id) {
-                    Variant::create([
-                        'product_id' => $data['id'],
-                        'variant_product_id' => $variant_product_id,
-                    ]);
+                    if($variant_product_id != ""){
+                        Variant::create([
+                            'product_id' => $data['id'],
+                            'variant_product_id' => $variant_product_id,
+                        ]);
+                        Product::where('id', $variant_product_id)->update([
+                            'is_main' => 0
+                        ]);
+                    }
                 }
             }
+
+            $sizes_id = explode(',', $data['sizes']);
+            if(count($sizes_id) !== 0){
+                ProductSize::where("product_id", "=", $data['id'])->delete();
+                foreach ($sizes_id as $size_id) {
+                    if($size_id != ""){
+                        ProductSize::create([
+                            'product_id' => $data['id'],
+                            'size_id' => $size_id,
+                        ]);
+                    }
+                }
+            }
+
             return response()->json(['is' => 'success', 'complete' => 'Một sản phẩm đã được cập nhật thành công']);
         }
         return response()->json(['is' => 'unsuccess', 'uncomplete' => 'Một sản phẩm chưa được cập nhật thành công']);

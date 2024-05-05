@@ -26,6 +26,9 @@ Product Detail
 		</div>
 		@if(isset($product))
 		<div class="col-xs-12">
+				<div class="box-header">
+					<h3 class="box-title">Cập nhật sản phẩm</h3>
+				</div>
 				<div class="box-body">
 					<legend></legend>
 					<div class="form-group">
@@ -82,19 +85,15 @@ Product Detail
 
 						<label for="" style="margin-top: 10px;">Kích thước</label>
 						<select name="sizes[]" id="select-state-size" class="form-control" multiple style="width: 100%; margin-top: 0px;">
-								@if(isset($sizes))
-									@foreach($sizes as $value)
-										@if($product->size_id == $value->id)
-											<option selected class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
-										@else
-											<option class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
-										@endif
-									@endforeach
-								@endif
-						</select><br>
+							@if(isset($sizes))
+							@foreach($sizes as $value)
+							<option class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
+							@endforeach
+							@endif
+						</select>
 						<script>
 							$('#select-state-size').selectize({
-								maxItems: 1,
+								maxItems: 20,
 								closeAfterSelect:true,
 								highlight:true,
 								selectOnTab:true,
@@ -299,7 +298,7 @@ Product Detail
 											<td class="col-sm-2">{{$value->name}}</td>
 											<td class="col-sm-1">
 												<div style="text-align: center;">
-													<img style="width: 100%; height: 60px;" src="{{url('images/'.$value->image)}}" alt="">
+													<img style="width: 100%; height: 150px;" src="{{url('images/'.$value->image)}}" alt="">
 												</div>
 											</td>
 											<td class="col-sm-2">{{$value->name}}</td>
@@ -359,7 +358,7 @@ Product Detail
 			form_data.append("product_category_id", $('select[name="product_categories[]"]').val());
 			form_data.append("manufacturer_id", $('select[name="manufacturers[]"]').val());
 			form_data.append("color_id", $('select[name="colors[]"]').val());
-			form_data.append("size_id", $('select[name="sizes[]"]').val());
+			form_data.append("sizes", $('select[name="sizes[]"]').val());
 			form_data.append("description", description.getData());
 			form_data.append("maintain", maintain.getData());
 			form_data.append('image', $('input[type=file]')[0].files[0]);

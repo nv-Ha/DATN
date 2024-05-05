@@ -14,8 +14,4 @@ class ProductCategory extends Model
 	public function products(){
 		return $this->hasMany('App\Models\Product');
 	}
-
-	public function countProduct(){
-		return $this->hasMany('App\Models\Product', 'product_category_id')->get()->count();
-	}
 }

@@ -952,7 +952,7 @@ a.arrow span {
   /* IE10+ */
   background: linear-gradient(to bottom, #45484d 0%, black 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#FF6600',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -1109,7 +1109,7 @@ a.arrow span {
   justify-content: center;
 }
 #em-mheader .em-wrapper-top {
-  background-color: #0000FF;
+  background-color: #FF6600;
   margin: 0 -10px;
   padding: 2rem 1rem;
 }

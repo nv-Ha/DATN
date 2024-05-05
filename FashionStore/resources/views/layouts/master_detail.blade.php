@@ -7,7 +7,7 @@
     <title>
         @yield('title')
     </title>
-    <meta name="description" content="Đến với mọi cửa hàng của Fashion Store, bạn đều được trải nghiệm và mua sắm những sản phẩm chất lượng cao, uy tín hàng đầu trên thị trường chăm sóc sức khỏe">
+    <meta name="description" content="Đến với mọi cửa hàng của Fashion M-Clothing Store, bạn đều được trải nghiệm và mua sắm những sản phẩm chất lượng cao, uy tín hàng đầu trên thị trường chăm sóc sức khỏe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="HTMLCooker">
 
@@ -133,14 +133,14 @@
                 <div id="em-mheader" class="visible-xs container">
                     <div id="em-mheader-top" class="row" style="background : #fff; margin-top: -10px;">
                         <div class="em-logo col-xs-14" style="margin-left: -20px; margin-bottom: -35px;">
-                            <a href="{{ url('/') }}" class="logo">
+                            {{-- <a href="{{ url('/') }}" class="logo">
                                 <img src="{{asset('/images/icons/logo-store-text.png')}}" />
-                            </a>
+                            </a> --}}
                         </div>
                         <div class="em-logo col-xs-10" style="margin-right: 0px;">
                             <a href="tel:0123 456 789">
                                 <img src="{{asset('/images/icons/call-2.gif')}}" alt="" style="width: 25px; height: 25px;">
-                                <span style="font-weight:bold; font-size:14px;"><span style="color:#0000FF;">0123 456 789</span></span>
+                                <span style="font-weight:bold; font-size:14px;"><span style="color:#FF6600;">0123 456 789</span></span>
                             </a>
                         </div>
                     </div>
@@ -241,31 +241,9 @@
                                                                 <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-list">
                                                                     <a class="em-menu-link" href="{{url('/')}}"> <span style="text-transform: uppercase;">Trang chủ</span> </a>
                                                                 </li><!-- /.menu-item-link -->
-
-                                                                <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-user-md">
-                                                                    <a class="em-menu-link" href="#"> <span style="text-transform: uppercase;"> Dược sĩ tư vấn </span> </a>
-                                                                </li><!-- /.menu-item-link -->
-
                                                                 <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-address-book-o">
-                                                                    <a class="em-menu-link" href="{{ url('/ban-tin-suc-khoe') }}"> <span style="text-transform: uppercase;"> Sức khỏe cho bé</span> </a>
+                                                                    <a class="em-menu-link" href="{{ url('/tin-tuc-su-kien') }}"> <span style="text-transform: uppercase;"> Sức khỏe cho bé</span> </a>
                                                                 </li><!-- /.menu-item-link -->
-
-                                                                <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-medkit">
-                                                                    <a class="em-menu-link" href="{{ url('/cua-hang/thuoc') }}"> <span style="text-transform: uppercase;"> Bổ sung vitamin & khoáng chất </span> </a>
-                                                                </li><!-- /.menu-item-link -->
-
-                                                                <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-dropbox">
-                                                                    <a class="em-menu-link" href="{{ url('/cua-hang/thuc-pham-chuc-nang') }}"> <span style="text-transform: uppercase;"> Nước tăng lực & giải khát </span> </a>
-                                                                </li><!-- /.menu-item-link -->
-
-                                                                <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa fa-shopping-cart">
-                                                                    <a class="em-menu-link" href="{{ url('/cua-hang/hang-tieu-dung') }}"> <span style="text-transform: uppercase;"> Giàu chất xơ tiêu hóa </span> </a>
-                                                                </li><!-- /.menu-item-link -->
-
-                                                                <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-ambulance">
-                                                                    <a class="em-menu-link" href="{{ url('/cua-hang/thiet-bi-y-te') }}"> <span style="text-transform: uppercase;"> Chức năng đặc biệt </span> </a>
-                                                                </li><!-- /.menu-item-link -->
-
                                                             </ul>
                                                         </div>
                                                     </div><!-- /.megamenu-wrapper -->
@@ -284,13 +262,13 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-24">
-                                    <div class="f-left" style="padding: 14px 20px;">
+                                    <div class="f-left" style="padding: 14px 0px;">
                                         <div class="f-left">
                                             <ul style="margin-bottom: 0px !important;">
                                                 <li class="">
-                                                    <a href="{{url('/')}}">
+                                                    {{-- <a href="{{url('/')}}">
                                                         <img src="{{asset('/images/icons/logo-store-text.png')}}" alt="" style="height: 115px; width: 320px; margin-bottom: -90px; margin-top: -30px; padding-left: -8px; margin-left: -35px;">
-                                                    </a>
+                                                    </a> --}}
                                                 </li>
                                             </ul>
                                         </div>
@@ -299,7 +277,7 @@
                                                 <li class="">
                                                     <a href="tel:0123 456 789">
                                                         <img src="{{asset('/images/icons/call-2.gif')}}" alt="" style="width: 25px; height: 25px;">
-                                                        <span style="font-weight:bold; font-size:14px;"><span>Hotline:</span> <span style="color:#0000FF;">0123 456 789</span></span>
+                                                        <span style="font-weight:bold; font-size:14px;"><span>Hotline:</span> <span style="color:#FF6600;">0123 456 789</span></span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -424,13 +402,13 @@
                         </div>
                     </div><!-- /.em-header-top -->
                     <div id="em-fixed-top"></div>
-                    <div class="em-header-bottom em-fixed-top" style="background : #0000FF;">
+                    <div class="em-header-bottom em-fixed-top" style="background : #FF6600;">
                         <div class="container em-menu-fix-pos">
                             <div class="row">
                                 <div class="col-sm-24">
                                     <div class="em-logo f-left" style="width : 85px; height : 75px; box-sizing : border-box;">
                                         <a href="/" class="logo">
-                                            <img class="retina-img" src="{{asset('/images/icons/logo-store.png')}}" style="width : 100%;max-height : 75px;padding-top: 4px;" />
+                                            <img class="retina-img" src="{{asset('/images/icons/logo-store.png')}}" style="max-height : 75px;padding-top: 4px;" />
                                         </a>
                                     </div>
                                     <div class="em-logo-sticky f-left">
@@ -493,12 +471,8 @@
                                                                 <a class="em-menu-link" href="{{url('/')}}" id="link-home"> <span>Trang chủ</span> </a>
                                                             </li><!-- /.menu-item-link -->
 
-                                                            <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                <a class="em-menu-link" href="#"> <span>Dược sĩ tư vấn</span> </a>
-                                                            </li><!-- /.menu-item-link -->
-
                                                             <li class="menu-item-link menu-item-depth-0 hidden-sm hidden-md menu-item-parent">
-                                                                <a class="em-menu-link" href="{{ url('/ban-tin-suc-khoe') }}"> <span>Bản tin sức khỏe</span> </a>
+                                                                <a class="em-menu-link" href="{{ url('/tin-tuc-su-kien') }}"> <span>Tin tức - sự kiên</span> </a>
                                                                 <ul class="menu-container" style="dropdown-menu">
                                                                     <li class="menu-item-vbox menu-item-depth-1 col-menu menu_col5 grid_6 menu-item-parent" style="">
                                                                         <ul class="menu-container">
@@ -571,7 +545,7 @@
                                                     Giấy phép ĐKKD số 01A8023039 cấp ngày 27 - 12 - 2020
                                                 </p>
                                                 <p style="text-align : center; color: #ffffff;">
-                                                    Phụ trách CM : Trịnh Ngọc Dũng
+                                                    Phụ trách CM : Nguyễn Việt Hà
                                                 </p>
                                                 <p style="text-align : center; color: #ffffff;">
                                                     Địa chỉ : 18 P. Viên, Đông Ngạc, Bắc Từ Liêm, Hà Nội
@@ -632,7 +606,7 @@
                                                         @endif
                                                         <style>
                                                             .keys>a:hover {
-                                                                color: #ff0099 !important;
+                                                                color: #000000 !important;
                                                                 background: #fff !important;
                                                                 border-color: #fff !important;
                                                             }
@@ -655,7 +629,7 @@
                                                     </li>
                                                     <!-- <style>
                                                         #hotline-footer:hover{
-                                                            color: #0000FF !important;
+                                                            color: #FF6600 !important;
                                                         }
                                                     </style> -->
                                                 </ul>
@@ -732,7 +706,7 @@
                             <div class="row">
                                 <div class="col-sm-24">
                                     <div class="em-footer-address">
-                                        <address class="f-left">&copy; Bản quyền thuộc về Fashion Store</address>
+                                        <address class="f-left">&copy; Bản quyền thuộc về Fashion M-Clothing Store</address>
                                     </div>
                                 </div>
                             </div>
@@ -746,31 +720,6 @@
         </div><!-- /.page -->
 
     </div><!-- /.wrapper -->
-    <div class="se-pre-con"></div>
-
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                xfbml: true,
-                version: 'v5.0'
-            });
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="112898516810168" theme_color="#0000FF" logged_in_greeting="Xin chào, Fashion Store có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, Fashion Store có thể giúp gì cho bạn?">
-    </div>
 </body>
 
 <!-- Mirrored from htmlcooker.com/tvlgiao/everything/assets/everything/fashion/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Oct 2015 02:42:17 GMT -->

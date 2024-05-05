@@ -18,7 +18,7 @@ class Customer extends Authenticatable
     protected $guard = 'customer';
     protected $table = 'customers';
     protected $fillable = [
-        'name', 'birthday', 'gender', 'phone_number', 
+        'name', 'birthday', 'gender', 'phone_number', 'email',
         'address', 'Số điện thoại', 'password', 'score_awards', 
         'money_payment_transactions', 'remember_token', 'status'
     ];

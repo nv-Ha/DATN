@@ -20,7 +20,7 @@ Transaction Detail
           <div class="row">
             <div class="col-xs-12">
               <h2 class="page-header">
-                <i class="fa fa-globe"></i> Fashion Store
+                <i class="fa fa-globe"></i> Fashion M-Clothing Store
                 <small class="pull-right">
                   Ngày đặt hàng:
                   @if(isset($transaction))
@@ -36,10 +36,10 @@ Transaction Detail
             <div class="col-sm-4 invoice-col">
               Từ
               <address>
-                <strong>Fashion Store</strong><br>
+                <strong>Fashion M-Clothing Store</strong><br>
                 18 P. Viên, Đông Ngạc, Bắc Từ Liêm, Hà Nội<br>
                 Điện thoại: 0978.478.178<br>
-                Email: info.functionalfoodstore@gmail.com
+                Email: fashionmclothingstore@gmail.com
               </address>
             </div>
             <!-- /.col -->
@@ -70,6 +70,8 @@ Transaction Detail
                   <tr>
                     <th>Sản phẩm</th>
                     <th>Mã sản phẩm</th>
+                    <th>Màu</th>
+                    <th>Size</th>
                     <th>Số lượng</th>
                     <th>Giá gốc (VNĐ)</th>
                     <th>Giá bán (VNĐ)</th>
@@ -83,6 +85,8 @@ Transaction Detail
                   <tr>
                     <td>{{$item->name}}</td>
                     <td>{{$item->code}}</td>
+                    <td>{{$item->colorName}}</td>
+                    <td>{{$item->sizeName}}</td>
                     <td>{{$item->quantity}}</td>
                     <td>{{number_format($item->price*1000 ,0 ,'.' ,'.')}}</td>
                     <td>{{number_format($item->price_sale*1000 ,0 ,'.' ,'.')}}</td>

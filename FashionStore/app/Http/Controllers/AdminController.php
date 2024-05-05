@@ -50,16 +50,15 @@ class AdminController extends Controller
 		// So luong nha san xuat
 		$count_manufacture = Manufacture::all()->count();
 
-		// So luong san pham thuoc nhom Bổ sung vitamin & khoáng chất
+		// So luong san pham thuoc nhom Sản phẩm nữ
 		$total_vitamin_product = Product::where('product_category_id', 1)->where('status', 1)->count();
 
-		// So luong san pham thuoc nhom Nước tăng lực & giải khát
+		// So luong san pham thuoc nhom Sản phẩm nam
 		$total_energy_product = Product::where('product_category_id', 2)->where('status', 1)->count();
 
-		// So luong san pham thuoc nhom Giàu chất xơ tiêu hóa
+		// So luong san pham thuoc nhom Sản phẩm trẻ em
 		$total_fiber_product = Product::where('product_category_id', 3)->where('status', 1)->count();
-
-		// So luong san pham thuoc nhom Chức năng đặc biệt
+		// So luong san pham thuoc nhom Sản phẩm đặc biệt
 		$total_special_product = Product::where('product_category_id', 4)->where('status', 1)->count();
 
 		return view(
@@ -111,16 +110,16 @@ class AdminController extends Controller
 		// So luong nha san xuat
 		$count_manufacture = Manufacture::all()->count();
 
-		// So luong san pham thuoc nhom Bổ sung vitamin & khoáng chất
+		// So luong san pham thuoc nhom Sản phẩm nữ
 		$total_vitamin_product = Product::where('product_category_id', 1)->where('status', 1)->count();
 
-		// So luong san pham thuoc nhom Nước tăng lực & giải khát
+		// So luong san pham thuoc nhom Sản phẩm nam
 		$total_energy_product = Product::where('product_category_id', 2)->where('status', 1)->count();
 
-		// So luong san pham thuoc nhom Giàu chất xơ tiêu hóa
+		// So luong san pham thuoc nhom Sản phẩm trẻ em
 		$total_fiber_product = Product::where('product_category_id', 3)->where('status', 1)->count();
 
-		// So luong san pham thuoc nhom Chức năng đặc biệt
+		// So luong san pham thuoc nhom Sản phẩm đặc biệt
 		$total_special_product = Product::where('product_category_id', 4)->where('status', 1)->count();
 
 		// So don hang trong moi thang den thoi diem hien tai

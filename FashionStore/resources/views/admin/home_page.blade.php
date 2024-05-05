@@ -83,10 +83,10 @@ Trang chủ
 				<h3>{{$total_vitamin_product}}</h3>
 				@endif
 
-				<p>Bổ sung vitamin & khoáng chất</p>
+				<p>Sản phẩm nữ</p>
 			</div>
 			<div class="icon">
-				<i class="fa fa-star-o" style="color: #fff;width: 70px;"></i>
+				<i class="fa fa-venus" style="color: #fff;width: 70px;"></i>
 			</div>
 		</div>
 	</div>
@@ -100,10 +100,10 @@ Trang chủ
 				<h3>{{$total_energy_product}}</h3>
 				@endif
 
-				<p>Nước tăng lực & giải khát</p>
+				<p>Sản phẩm nam</p>
 			</div>
 			<div class="icon">
-				<i class="fa fa-star" style="color: #fff;width: 76px;"></i>
+				<i class="fa fa-mars" style="color: #fff;width: 76px;"></i>
 			</div>
 		</div>
 	</div>
@@ -117,10 +117,10 @@ Trang chủ
 				<h3>{{$total_fiber_product}}</h3>
 				@endif
 
-				<p>Giàu chất xơ tiêu hóa</p>
+				<p>Sản phẩm trẻ em</p>
 			</div>
 			<div class="icon">
-				<i class="fa fa-truck" style="color: #fff;width: 85px;"></i>
+				<i class="fa fa-child" style="color: #fff;width: 85px;"></i>
 			</div>
 		</div>
 	</div>
@@ -133,13 +133,13 @@ Trang chủ
 				<h3>{{$total_special_product}}</h3>
 				@endif
 
-				<p>Chức năng đặc biệt</p>
+				<p>Sản phẩm đặc biệt</p>
 			</div>
 			<div class="icon">
-				<i class="fa fa-medkit" style="color: #fff;"></i>
+				<i class="fa fa-star-half-o" style="color: #fff;"></i>
 			</div>
 		</div>
-	</div>
+	</div> 
 	<!-- ./col -->
 </div>
 

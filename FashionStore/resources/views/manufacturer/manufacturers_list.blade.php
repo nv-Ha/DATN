@@ -11,12 +11,12 @@ Manufacturers List
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-header">
-					<h3 class="box-title">Danh sách Thương hiệu</h3>
+					<h3 class="box-title">Danh sách thương hiệu</h3>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
 					<div style="margin-bottom: 30px;">
-						<a href="/admin/new/manufacturer" data-toggle="modal" class="btn btn-info btn-add">Thêm Thương hiệu mới</a>
+						<a href="/admin/new/manufacturer" data-toggle="modal" class="btn btn-info btn-add">Thêm thương hiệu mới</a>
 					</div>
 					<table id="list-manufacturers" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>

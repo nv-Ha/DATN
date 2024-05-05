@@ -247,25 +247,25 @@ Trang chủ
             value    : {{$total_vitamin_product}},
             color    : '#2298FE',
             highlight: '#2298FE',
-            label    : 'Bổ sung vitamin & khoáng chất'
+            label    : 'Sản phẩm nữ'
         },
         {
             value    : {{$total_energy_product}},
             color    : '#FE22F4',
             highlight: '#FE22F4',
-            label    : 'Nước tăng lực & giải khát'
+            label    : 'Sản phẩm nam'
         },
         {
             value    : {{$total_fiber_product}},
             color    : '#44F801',
             highlight: '#44F801',
-            label    : 'Giàu chất xơ tiêu hóa'
+            label    : 'Sản phẩm trẻ em'
         },
         {
             value    : {{$total_special_product}},
             color    : '#F89201 ',
             highlight: '#F89201 ',
-            label    : 'Chức năng đặc biệt'
+            label    : 'Sản phẩm đặc biệt'
         }
     ]
     var pieOptions     = {

@@ -27,7 +27,6 @@ products List
 								<th class="col-sm-1" style="text-align: center;">Nhóm sản phẩm</th>
 								<th class="col-sm-1" style="text-align: center;">Ảnh</th>
 								<th class="col-sm-1" style="text-align: center;">Màu</th>
-								<th class="col-sm-1" style="text-align: center;">Kích thước</th>
 								<th class="col-sm-1" style="text-align: center;">Giá bán</th>
 								<th class="col-sm-1" style="text-align: center;">Số lượng còn</th>
 								<th class="col-sm-1" style="text-align: center;">Đã bán</th>
@@ -43,11 +42,10 @@ products List
 								<td class="col-sm-1">{{$value->product_category_name}}</td>
 								<td class="col-sm-1">
 									<div style="text-align: center;">
-										<img style="width: 100%; height: 100px;" src="{{url('images/'.$value->image)}}" alt="">
+										<img style="width: 100%; height: 150px;" src="{{url('images/'.$value->image)}}" alt="">
 									</div>
 								</td>
 								<td class="col-sm-1" style="text-align: center;">{{$value->color_name}}</td>
-								<td class="col-sm-1" style="text-align: center;">{{$value->size_name}}</td>
 								<td class="col-sm-1" style="text-align: center;">{{number_format($value->price_sale*1000 ,0 ,'.' ,'.')}} VND</td>
 								<td class="col-sm-1" style="text-align: center;">{{$value->quantity}}</td>
 								<td class="col-sm-1" style="text-align: center;">{{$value->bought}}</td>

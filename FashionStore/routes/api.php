@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['namespace' => 'Api', 'middleware' => 'api'], function(){
     Route::get('get-all-products', 'ProductController@getAllProduct');
+    Route::get('/product-size/{id}', 'ProductController@sizesOfProduct');
 
     Route::post('send-notification', 'NotificationController@sendNotification');
 });

@@ -70,8 +70,8 @@ New Post
 				<!-- /.box-header -->
 				<div class="box-body">
 					<select id="getCategoryId" class="form-control select2" style="width: 100%; margin-top: 0px;">
-						@if(isset($categories))
-						@foreach($categories as $value)
+						@if(isset($post_categories))
+						@foreach($post_categories as $value)
 						<option selected="selected" value="{{$value->id}}">{{$value->name}}</option>
 						@endforeach
 						@endif

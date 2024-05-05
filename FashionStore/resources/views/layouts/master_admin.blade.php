@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | Fashion Store</title>
+  <title>Admin | Fashion M-Clothing Store</title>
   <link rel="shortcut icon" type="image" href="{{asset('/images/icons/logo-nha-thuoc-nhi-khoa.png')}}" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -199,7 +199,7 @@
                   <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">@endif
 
                   <p>
-                    Fashion Store
+                    Fashion M-Clothing Store
                     <small>{{\Carbon\Carbon::parse(Auth::guard('admin')->user()->birthday)->format('d-m-Y')}}</small>
                   </p>
                 </li>
@@ -299,13 +299,13 @@
             <ul class="treeview-menu">
               <li><a href="/admin/product"> <i class="fa fa-th"></i>Sản phẩm</a></li>
               <li><a href="/admin/manufacturer"><i class="fa fa-building"></i>Thương hiệu</a></li>
-              <li><a href="/admin/unit"><i class="fa fa-calculator"></i>Danh mục</a></li>
+              <li><a href="/admin/category"><i class="fa fa-calculator"></i>Danh mục</a></li>
             </ul>
           </li>
 
           <li class="active treeview">
-            <a href="{{ url('/ban-tin-suc-khoe') }}">
-              <i class="fa fa-laptop"></i> <span>Bản tin sức khỏe</span>
+            <a href="{{ url('/tin-tuc-su-kien') }}">
+              <i class="fa fa-laptop"></i> <span>Tin tức - sự kiên</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -355,7 +355,7 @@
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.8.0
       </div>
-      <strong>Copyright &copy; 2023-2024 <a href="">Fashion Store</a>.</strong> All rights
+      <strong>Copyright &copy; 2023-2024 <a href="">Fashion M-Clothing Store</a>.</strong> All rights
       reserved.
     </footer>
 

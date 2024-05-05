@@ -1,7 +1,7 @@
 @extends('layouts.master_admin') 
 
 @section('controll')
-Units List
+Categories List
 @endsection
 
 @section('content')
@@ -16,19 +16,19 @@ Units List
 				<!-- /.box-header -->
 				<div class="box-body">
 					<div style="margin-bottom: 30px;">
-						<a href="/admin/new/unit" data-toggle="modal" class="btn btn-warning btn-add">Thêm dạng danh mục</a>
+						<a href="/admin/new/category" data-toggle="modal" class="btn btn-warning btn-add">Thêm danh mục</a>
 					</div>
-					<table id="list-units" class="table table-bordered table-striped" style="margin-top : 10px;">
+					<table id="list-categories" class="table table-bordered table-striped" style="margin-top : 10px;">
 						<thead>
 							<tr>
 								<th class="col-sm-2" style="text-align: center;">ID</th>
-								<th class="col-sm-6" style="text-align: center;">danh mục</th>
+								<th class="col-sm-6" style="text-align: center;">Tên danh mục</th>
 								<th class="col-sm-4" style="text-align: center;">Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
-							@if(isset($units))
-							@foreach ($units as $value)
+							@if(isset($categories))
+							@foreach ($categories as $value)
 							<tr>
 								<td class="col-sm-2" style="text-align: center;">{{$value->id}}</td>
 								<td class="col-sm-6" style="text-align: center;">{{$value->name}}</td>
@@ -58,7 +58,7 @@ Units List
 
 	<!-- modal edit -->
 	<div class="col-xs-12">
-		<div class="modal fade" id="editUnit" tabindex="-1" role="dialog" aria-labelledby="formUnit" aria-hidden="true">
+		<div class="modal fade" id="editCategory" tabindex="-1" role="dialog" aria-labelledby="formCategory" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content" style="border-radius : 10px;">
 					<div class="modal-header">
@@ -86,7 +86,7 @@ Units List
 
 	<script>
 		$(document).ready(function() {
-			$('#list-units').DataTable( {
+			$('#list-categories').DataTable( {
 				"lengthMenu": [[25, 50, 100, 500, -1], [25, 50, 100, 500, "All"]]
 			} );
 		} );
@@ -97,7 +97,7 @@ Units List
 			var id = $(this).attr('data-id');
 			$.ajax({
 				type : "get",
-				url : "/admin/unit/" + id,
+				url : "/admin/category/" + id,
 				data : {
 					_token :$('[name="_token"]').val(),
 				},
@@ -108,14 +108,14 @@ Units List
 				}
 			});
 
-			$('#editUnit').modal('show');
+			$('#editCategory').modal('show');
 		});
 		
 		$('.btn-update').click(function(){
 			var id = $('#editID').val();
 			$.ajax({
 				type: 'put',
-				url: '/admin/unit/' + id,
+				url: '/admin/category/' + id,
 				data:{
 					_token :$('[name="_token"]').val(),
 					id : $('#editID').val(),
@@ -147,7 +147,7 @@ Units List
 						});
 
 						setTimeout(function () {
-							window.location.href="/admin/unit/";
+							window.location.href="/admin/category/";
 						},1000);
 					}
 					if(response.is === 'unsuccess'){
@@ -171,7 +171,7 @@ Units List
 				var id = $(this).attr('data-id');
 				$.ajax({
 					type: 'delete',
-					url: '/admin/unit/' + id,
+					url: '/admin/category/' + id,
 					data:{
 						_token : $('[name="_token"]').val(),
 					},
@@ -188,7 +188,7 @@ Units List
 							});
 
 							setTimeout(function () {
-								window.location.href="/admin/unit/";
+								window.location.href="/admin/category/";
 							},1000);
 						}
 						if(response.is === 'unsuccess'){

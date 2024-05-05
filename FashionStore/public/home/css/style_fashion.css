@@ -59,7 +59,7 @@
   background: #ffffff;
 }
 .em-color span.emColorStyle01:after {
-  background: #000000;
+  background: #FF6600;
 }
 .em-color span.emColorStyle02 {
   background: #fd3262;
@@ -68,7 +68,7 @@
   background: #ffffff;
 }
 .em-color span.emColorStyle02:after {
-  background: #000000;
+  background: #FF6600;
 }
 .em-color span.emColorStyle03 {
   background: #7b344f;
@@ -77,16 +77,16 @@
   background: #ffffff;
 }
 .em-color span.emColorStyle03:after {
-  background: #000000;
+  background: #FF6600;
 }
 .em-color span.emColorStyle04 {
-  background: #ff0099;
+  background: #000000;
 }
 .em-color span.emColorStyle04:before {
   background: #ffffff;
 }
 .em-color span.emColorStyle04:after {
-  background: #000000;
+  background: #FF6600;
 }
 
 /*# sourceMappingURL=style_fashion.css.map */

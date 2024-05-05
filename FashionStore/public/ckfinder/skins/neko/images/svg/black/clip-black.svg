@@ -56,7 +56,7 @@
                 <g id="Path-30" opacity="0.410389459">
                     <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-6"></use>
                     <use fill="none" xlink:href="#path-6"></use>
-                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <use fill="#FF6600" fill-rule="evenodd" xlink:href="#path-6"></use>
                 </g>
             </g>
         </g>

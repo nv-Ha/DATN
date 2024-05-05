@@ -829,7 +829,7 @@ body .ui-tooltip {
 	border: none;
     background: #0094ee;
     font-weight: normal;
-    color: #555555;
+    color: #000000;
     cursor: pointer;
     height: 16px;
     width: 16px;
@@ -842,7 +842,7 @@ body .ui-tooltip {
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
-	color: #555555;
+	color: #000000;
 	text-decoration: none;
 }
 .ui-state-hover,

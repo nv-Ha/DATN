@@ -11,7 +11,7 @@
         <mask id="mask-2" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
-        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <use id="Mask" fill="#FF6600" fill-rule="nonzero" xlink:href="#path-1"></use>
         <g id="colors/grey-2" mask="url(#mask-2)" fill="#3B474E">
             <g transform="translate(0.000000, 1.000000)" id="Shape">
                 <polygon points="0 0 16 0 16 14 0 14"></polygon>

@@ -51,7 +51,11 @@ class TransactionController extends Controller
     public function show($order_id)
     {
         $transaction = Transaction::where('order_id', $order_id)->first();
-        $order = Order::where('order_id', $order_id)->get();
+        $order = Order::select('orders.*', 'sizes.name as sizeName', 'colors.name as colorName')
+        ->join('products', 'products.id', '=', 'orders.product_id')
+        ->join('colors', 'colors.id', '=', 'products.color_id')
+        ->join('sizes', 'sizes.id', '=', 'orders.size_id')
+        ->where('orders.order_id', $order_id)->get();
 
         return view('transaction.transaction_detail', ['transaction' => $transaction, 'order' => $order]);
     }

@@ -1,7 +1,7 @@
 @extends('layouts.master_home')
 
 @section('title')
-    404 Not Found - Fashion Store
+    404 Not Found - Fashion M-Clothing Store
 @endsection
 
 @section('home')

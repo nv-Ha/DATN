@@ -81,17 +81,17 @@ New Product
 							<option class="isblue" value="{{ $value->id }}">{{ $value->name }}</option>
 							@endforeach
 							@endif
-						</select><br>
+						</select>
 						<script>
 							$('#select-state-size').selectize({
-								maxItems: 1,
+								maxItems: 20,
 								closeAfterSelect:true,
 								highlight:true,
 								selectOnTab:true,
 							});
 						</script>
 						
-						<label for="" style="margin-top: 10px;">Thương hiệu</label>
+						<label for="" style="margin-top: 15px;">Thương hiệu</label>
 						<select name="manufacturers[]" id="select-state-manufacturer" class="form-control" multiple style="width: 100%; margin-top: 0px;">
 							@if(isset($manufacturers))
 							@foreach($manufacturers as $value)
@@ -276,7 +276,7 @@ New Product
 											<td class="col-sm-2">{{$value->name}}</td>
 											<td class="col-sm-1">
 												<div style="text-align: center;">
-													<img style="width: 100%; height: 60px;" src="{{url('images/'.$value->image)}}" alt="">
+													<img style="width: 100%; height: 150px;" src="{{url('images/'.$value->image)}}" alt="">
 												</div>
 											</td>
 											<td class="col-sm-2">{{$value->name}}</td>
@@ -333,7 +333,7 @@ New Product
 			form_data.append("product_category_id", $('select[name="product_categories[]"]').val());
 			form_data.append("manufacturer_id", $('select[name="manufacturers[]"]').val());
 			form_data.append("color_id", $('select[name="colors[]"]').val());
-			form_data.append("size_id", $('select[name="sizes[]"]').val());
+			form_data.append("sizes", $('select[name="sizes[]"]').val());
 			form_data.append("description", description.getData());
 			form_data.append("maintain", maintain.getData());
 			form_data.append('image', $('input[type=file]')[0].files[0]);

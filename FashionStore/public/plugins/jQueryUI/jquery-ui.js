@@ -10005,7 +10005,7 @@ jQuery.cssHooks.borderColor = {
 colors = jQuery.Color.names = {
 	// 4.1. Basic color keywords
 	aqua: "#00ffff",
-	black: "#000000",
+	black: "#FF6600",
 	blue: "#0000ff",
 	fuchsia: "#ff00ff",
 	gray: "#808080",

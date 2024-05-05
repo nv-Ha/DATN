@@ -2777,7 +2777,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: #000000;
 }
 
 .form-control {
@@ -2787,7 +2787,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: #000000;
   background-color: white;
   background-image: none;
   border: 1px solid #cccccc;
@@ -4658,7 +4658,7 @@ input[type="button"].btn-block {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #000000;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -4801,7 +4801,7 @@ input[type="button"].btn-block {
   border-color: #eeeeee #eeeeee #dddddd;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #000000;
   background-color: white;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
@@ -5215,7 +5215,7 @@ input[type="button"].btn-block {
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
+  color: #000000;
   background-color: #e7e7e7;
 }
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -5237,7 +5237,7 @@ input[type="button"].btn-block {
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #e7e7e7;
-  color: #555555;
+  color: #000000;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -5248,7 +5248,7 @@ input[type="button"].btn-block {
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
+    color: #000000;
     background-color: #e7e7e7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5904,7 +5904,7 @@ a.thumbnail.active {
 }
 
 a.list-group-item {
-  color: #555555;
+  color: #000000;
 }
 a.list-group-item .list-group-item-heading {
   color: #333333;
@@ -6808,7 +6808,7 @@ button.close {
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#FF660000', GradientType=1);
 }
 .carousel-control.right {
   left: auto;
@@ -6816,7 +6816,7 @@ button.close {
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF660000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover, .carousel-control:focus {
   outline: none;
