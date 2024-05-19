@@ -79,8 +79,8 @@ Trang chủ
 		<!-- small box -->
 		<div class="small-box" style="background: yellow; color: #131312;">
 			<div class="inner">
-				@if(isset($total_vitamin_product))
-				<h3>{{$total_vitamin_product}}</h3>
+				@if(isset($total_1st_product))
+				<h3>{{$total_1st_product}}</h3>
 				@endif
 
 				<p>Sản phẩm nữ</p>
@@ -96,8 +96,8 @@ Trang chủ
 		<!-- small box -->
 		<div class="small-box" style="background: #C6009A; color: #fff;">
 			<div class="inner">
-				@if(isset($total_energy_product))
-				<h3>{{$total_energy_product}}</h3>
+				@if(isset($total_2nd_product))
+				<h3>{{$total_2nd_product}}</h3>
 				@endif
 
 				<p>Sản phẩm nam</p>
@@ -113,8 +113,8 @@ Trang chủ
 		<!-- small box -->
 		<div class="small-box" style="background: #01FAE6; color: #011110;">
 			<div class="inner">
-				@if(isset($total_fiber_product))
-				<h3>{{$total_fiber_product}}</h3>
+				@if(isset($total_3rd_product))
+				<h3>{{$total_3rd_product}}</h3>
 				@endif
 
 				<p>Sản phẩm trẻ em</p>
@@ -129,8 +129,8 @@ Trang chủ
 		<!-- small box -->
 		<div class="small-box" style="background: #1b00ff85; color: #fff;">
 			<div class="inner">
-				@if(isset($total_special_product))
-				<h3>{{$total_special_product}}</h3>
+				@if(isset($total_4th_product))
+				<h3>{{$total_4th_product}}</h3>
 				@endif
 
 				<p>Sản phẩm đặc biệt</p>

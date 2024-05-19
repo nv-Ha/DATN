@@ -51,15 +51,15 @@ class AdminController extends Controller
 		$count_manufacture = Manufacture::all()->count();
 
 		// So luong san pham thuoc nhom Sản phẩm nữ
-		$total_vitamin_product = Product::where('product_category_id', 1)->where('status', 1)->count();
+		$total_1st_product = Product::where('product_category_id', 1)->where('status', 1)->count();
 
 		// So luong san pham thuoc nhom Sản phẩm nam
-		$total_energy_product = Product::where('product_category_id', 2)->where('status', 1)->count();
+		$total_2nd_product = Product::where('product_category_id', 2)->where('status', 1)->count();
 
 		// So luong san pham thuoc nhom Sản phẩm trẻ em
-		$total_fiber_product = Product::where('product_category_id', 3)->where('status', 1)->count();
+		$total_3rd_product = Product::where('product_category_id', 3)->where('status', 1)->count();
 		// So luong san pham thuoc nhom Sản phẩm đặc biệt
-		$total_special_product = Product::where('product_category_id', 4)->where('status', 1)->count();
+		$total_4th_product = Product::where('product_category_id', 4)->where('status', 1)->count();
 
 		return view(
 			'admin.home_page',
@@ -73,10 +73,10 @@ class AdminController extends Controller
 				'count_post',
 				'count_transaction_delivered',
 				'count_manufacture',
-				'total_vitamin_product',
-				'total_energy_product',
-				'total_fiber_product',
-				'total_special_product'
+				'total_1st_product',
+				'total_2nd_product',
+				'total_3rd_product',
+				'total_4th_product'
 			)
 		);
 	}
@@ -111,16 +111,16 @@ class AdminController extends Controller
 		$count_manufacture = Manufacture::all()->count();
 
 		// So luong san pham thuoc nhom Sản phẩm nữ
-		$total_vitamin_product = Product::where('product_category_id', 1)->where('status', 1)->count();
+		$total_1st_product = Product::where('product_category_id', 1)->where('status', 1)->count();
 
 		// So luong san pham thuoc nhom Sản phẩm nam
-		$total_energy_product = Product::where('product_category_id', 2)->where('status', 1)->count();
+		$total_2nd_product = Product::where('product_category_id', 2)->where('status', 1)->count();
 
 		// So luong san pham thuoc nhom Sản phẩm trẻ em
-		$total_fiber_product = Product::where('product_category_id', 3)->where('status', 1)->count();
+		$total_3rd_product = Product::where('product_category_id', 3)->where('status', 1)->count();
 
 		// So luong san pham thuoc nhom Sản phẩm đặc biệt
-		$total_special_product = Product::where('product_category_id', 4)->where('status', 1)->count();
+		$total_4th_product = Product::where('product_category_id', 4)->where('status', 1)->count();
 
 		// So don hang trong moi thang den thoi diem hien tai
 		$transaction_each_month = DB::select("SELECT MONTHNAME(created_at) as month, COUNT(id) AS count
@@ -240,10 +240,10 @@ class AdminController extends Controller
 				'count_post',
 				'count_transaction_delivered',
 				'count_manufacture',
-				'total_vitamin_product',
-				'total_energy_product',
-				'total_fiber_product',
-				'total_special_product',
+				'total_1st_product',
+				'total_2nd_product',
+				'total_3rd_product',
+				'total_4th_product',
 				'transactions_success_month',
 				'register_month',
 				'sum_money_prime_month',

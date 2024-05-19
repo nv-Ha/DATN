@@ -480,8 +480,8 @@
                                                                                 <div class="em-line-01">
                                                                                     <div>
                                                                                         <ul class="menu-container" style="">
-                                                                                            @if(isset($categories))
-                                                                                            @foreach($categories as $value)
+                                                                                            @if(isset($post_categories))
+                                                                                            @foreach($post_categories as $value)
                                                                                             <li class="menu-item-link menu-item-depth-1 first">
                                                                                                 <a class="em-menu-link" href="/chuyen-muc/{{$value->slug}}">
                                                                                                     <span>{{$value->name}}</span>
